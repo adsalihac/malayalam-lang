@@ -17,8 +17,8 @@ Thank you for your interest in contributing to MalayalamLang. This guide will he
 
 ```bash
 # Clone repository
-git clone https://github.com/malayalamland/malayalamland.git
-cd malayalamland
+git clone https://github.com/adsalihac/malayalam-lang.git
+cd malayalam-lang
 
 # Install pnpm
 npm install -g pnpm

@@ -6,7 +6,7 @@ A modern, beginner-friendly programming language where you write code using Mala
 കാണിക്കുക("ഹലോ, ലോകം!")
 ```
 
-Transpiles to JavaScript and runs on Node.js.
+Translate to JavaScript and runs on Node.js.
 
 ## Features
 
@@ -207,8 +207,8 @@ See the [examples/](./examples/) directory for complete programs.
 ## Support
 
 - 📚 [Documentation](./docs)
-- 🐛 [Issue Tracker](https://github.com/malayalamland/malayalamland/issues)
-- 💬 [Discussions](https://github.com/malayalamland/malayalamland/discussions)
+- 🐛 [Issue Tracker](https://github.com/adsalihac/malayalam-lang/issues)
+- 💬 [Discussions](https://github.com/adsalihac/malayalam-lang/discussions)
 
 ## License
 

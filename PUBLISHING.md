@@ -296,6 +296,6 @@ npm publish --access public --verbose
 ## Links
 
 - NPM: https://www.npmjs.com/org/malayalamland
-- Repository: https://github.com/malayalamland/malayalamland
-- Issues: https://github.com/malayalamland/malayalamland/issues
-- Discussions: https://github.com/malayalamland/malayalamland/discussions
+- Repository: https://github.com/adsalihac/malayalam-lang
+- Issues: https://github.com/adsalihac/malayalam-lang/issues
+- Discussions: https://github.com/adsalihac/malayalam-lang/discussions

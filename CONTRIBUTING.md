@@ -5,7 +5,7 @@ Thank you for your interest in contributing! 🎉
 ## Getting Started
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/malayalamland.git`
+2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/malayalam-lang.git`
 3. Install dependencies: `pnpm install`
 4. Create a branch: `git checkout -b feature/your-feature`
 

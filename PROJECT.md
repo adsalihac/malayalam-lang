@@ -113,7 +113,7 @@ malayalam-lang/
 
 ```bash
 # From source
-git clone https://github.com/malayalamland/malayalamland.git
+git clone https://github.com/adsalihac/malayalam-lang.git
 cd malayalam-lang
 pnpm install
 pnpm build
@@ -282,8 +282,8 @@ See [LICENSE](./LICENSE) for details.
 
 ## Community
 
-- GitHub Issues: [Report bugs](https://github.com/malayalamland/malayalamland/issues)
-- GitHub Discussions: [Share ideas](https://github.com/malayalamland/malayalamland/discussions)
+- GitHub Issues: [Report bugs](https://github.com/adsalihac/malayalam-lang/issues)
+- GitHub Discussions: [Share ideas](https://github.com/adsalihac/malayalam-lang/discussions)
 - Contributing: [See CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## Acknowledgments
@@ -351,10 +351,10 @@ For help:
 
 ## Project Links
 
-- **GitHub**: https://github.com/malayalamland/malayalamland
+- **GitHub**: https://github.com/adsalihac/malayalam-lang
 - **npm (when published)**: https://www.npmjs.com/org/malayalamland
-- **Issues**: https://github.com/malayalamland/malayalamland/issues
-- **Discussions**: https://github.com/malayalamland/malayalamland/discussions
+- **Issues**: https://github.com/adsalihac/malayalam-lang/issues
+- **Discussions**: https://github.com/adsalihac/malayalam-lang/discussions
 
 ## Changes from Initial Plan
 

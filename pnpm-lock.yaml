@@ -32,10 +32,10 @@ importers:
 
   packages/cli:
     dependencies:
-      '@malayalamland/core':
+      '@malayalamlang/core':
         specifier: workspace:*
         version: link:../core
-      '@malayalamland/runtime':
+      '@malayalamlang/runtime':
         specifier: workspace:*
         version: link:../runtime
       chalk:

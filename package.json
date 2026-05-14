@@ -1,5 +1,5 @@
 {
-  "name": "malayalamland",
+  "name": "malayalamlang",
   "version": "0.1.0",
   "description": "A Malayalam programming language - write code using Malayalam keywords!",
   "private": true,
@@ -10,10 +10,19 @@
   "scripts": {
     "build": "pnpm -r build",
     "test": "pnpm -r test",
+    "test:run": "pnpm -r test:run",
     "lint": "pnpm -r lint",
     "format": "prettier --write \"packages/**/*.{ts,js,json,md}\"",
     "format:check": "prettier --check \"packages/**/*.{ts,js,json,md}\"",
     "clean": "pnpm -r clean && rm -rf node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adsalihac/malayalam-lang.git"
+  },
+  "homepage": "https://github.com/adsalihac/malayalam-lang#readme",
+  "bugs": {
+    "url": "https://github.com/adsalihac/malayalam-lang/issues"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",

@@ -57,7 +57,7 @@ MalayalamLang is a modern programming language that allows developers to write c
 
 ## Core Components
 
-### 1. Lexer (@malayalamland/core)
+### 1. Lexer (@malayalamlang/core)
 
 The lexer (lexical analyzer) converts source code into tokens.
 
@@ -83,7 +83,7 @@ class Lexer {
 }
 ```
 
-### 2. Parser (@malayalamland/core)
+### 2. Parser (@malayalamlang/core)
 
 The parser converts tokens into an Abstract Syntax Tree (AST).
 
@@ -123,7 +123,7 @@ Language-independent representation of the program structure.
 - `ReturnStatement` - Function return
 - Expression nodes (Binary, Unary, Call, etc.)
 
-### 4. Transpiler (@malayalamland/core)
+### 4. Transpiler (@malayalamlang/core)
 
 Converts AST into JavaScript code.
 
@@ -140,7 +140,7 @@ class Transpiler {
 }
 ```
 
-### 5. Runtime (@malayalamland/runtime)
+### 5. Runtime (@malayalamlang/runtime)
 
 Provides built-in functions and utilities.
 
@@ -151,7 +151,7 @@ Provides built-in functions and utilities.
 - String functions (toUpperCase, substring, etc.)
 - Type checking functions
 
-### 6. CLI (@malayalamland/cli)
+### 6. CLI (@malayalamlang/cli)
 
 Command-line interface for development.
 

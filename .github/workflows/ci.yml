@@ -3,11 +3,14 @@ name: CI/CD
 on:
   push:
     branches: [main, develop]
+    tags:
+      - 'v*.*.*'
   pull_request:
     branches: [main, develop]
 
 jobs:
-  build:
+  build-and-test:
+    name: Build & Test
     runs-on: ubuntu-latest
 
     strategy:
@@ -23,15 +26,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
         with:
           version: 8
 
       - name: Get pnpm store directory
         id: pnpm-cache
         shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+        run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - name: Setup pnpm cache
         uses: actions/cache@v3
@@ -48,10 +50,6 @@ jobs:
         run: pnpm lint
         continue-on-error: true
 
-      - name: Format check
-        run: pnpm format:check
-        continue-on-error: true
-
       - name: Build
         run: pnpm build
 
@@ -59,31 +57,87 @@ jobs:
         run: pnpm test:run
 
   publish:
-    needs: build
+    name: Publish to npm
+    needs: build-and-test
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: startsWith(github.ref, 'refs/tags/v')
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js
+      - name: Use Node.js 20.x
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
         with:
           version: 8
 
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build
+      - name: Build all packages
         run: pnpm build
 
-      - name: Publish to npm
-        run: pnpm -r publish --access public
+      - name: Publish packages to npm
+        run: pnpm -r publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  release:
+    name: Create GitHub Release
+    needs: publish
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Extract version from tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Generate changelog
+        id: changelog
+        run: |
+          PREV_TAG=$(git tag --sort=-creatordate | grep -E '^v[0-9]' | sed -n '2p')
+          if [ -z "$PREV_TAG" ]; then
+            CHANGELOG=$(git log --oneline --pretty=format:"- %s" HEAD)
+          else
+            CHANGELOG=$(git log --oneline --pretty=format:"- %s" ${PREV_TAG}..HEAD)
+          fi
+          echo "CHANGELOG<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGELOG" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.version.outputs.VERSION }}
+          release_name: MalayalamLang ${{ steps.version.outputs.VERSION }}
+          body: |
+            ## What's Changed
+
+            ${{ steps.changelog.outputs.CHANGELOG }}
+
+            ## Install
+
+            ```bash
+            npm install -g @malayalamlang/cli
+            ```
+
+            **Packages published:**
+            - `@malayalamlang/core@${{ steps.version.outputs.VERSION }}`
+            - `@malayalamlang/runtime@${{ steps.version.outputs.VERSION }}`
+            - `@malayalamlang/cli@${{ steps.version.outputs.VERSION }}`
+          draft: false
+          prerelease: ${{ contains(steps.version.outputs.VERSION, '-') }}

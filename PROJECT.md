@@ -22,9 +22,9 @@ MalayalamLang is a **modern, beginner-friendly programming language** that allow
 ## Project Stats
 
 📦 **3 Main Packages**
-- @malayalamland/core (Compiler)
-- @malayalamland/runtime (Built-in functions)
-- @malayalamland/cli (Command-line interface)
+- @malayalamlang/core (Compiler)
+- @malayalamlang/runtime (Built-in functions)
+- @malayalamlang/cli (Command-line interface)
 
 📝 **29+ Source Files**
 - 10 TypeScript compiler files
@@ -119,7 +119,7 @@ pnpm install
 pnpm build
 
 # Or from npm (when published)
-npm install -g @malayalamland/cli
+npm install -g @malayalamlang/cli
 ```
 
 ### Hello World
@@ -352,7 +352,7 @@ For help:
 ## Project Links
 
 - **GitHub**: https://github.com/adsalihac/malayalam-lang
-- **npm (when published)**: https://www.npmjs.com/org/malayalamland
+- **npm (when published)**: https://www.npmjs.com/org/malayalamlang
 - **Issues**: https://github.com/adsalihac/malayalam-lang/issues
 - **Discussions**: https://github.com/adsalihac/malayalam-lang/discussions
 

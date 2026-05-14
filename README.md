@@ -22,7 +22,7 @@ Translate to JavaScript and runs on Node.js.
 ### Installation
 
 ```bash
-npm install -g @malayalamland/cli
+npm install -g @malayalamlang/cli
 ```
 
 ### Hello World

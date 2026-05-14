@@ -4,9 +4,9 @@
 
 MalayalamLang is published as three main npm packages:
 
-1. **@malayalamland/core** - Compiler and transpiler
-2. **@malayalamland/runtime** - Built-in functions
-3. **@malayalamland/cli** - Command-line interface
+1. **@malayalamlang/core** - Compiler and transpiler
+2. **@malayalamlang/runtime** - Built-in functions
+3. **@malayalamlang/cli** - Command-line interface
 
 ## Pre-Publication Checklist
 
@@ -70,12 +70,12 @@ cd ../..
 
 ```bash
 # Check published packages
-npm info @malayalamland/core
-npm info @malayalamland/runtime
-npm info @malayalamland/cli
+npm info @malayalamlang/core
+npm info @malayalamlang/runtime
+npm info @malayalamlang/cli
 
 # Test installation
-npm install -g @malayalamland/cli
+npm install -g @malayalamlang/cli
 malayalam --version
 ```
 
@@ -164,7 +164,7 @@ git push origin v0.2.0
 
 ## Package Contents
 
-### @malayalamland/core
+### @malayalamlang/core
 
 **What's included:**
 - Lexer (tokenizer)
@@ -177,7 +177,7 @@ git push origin v0.2.0
 **Size:** ~50KB
 **Dependencies:** None (pure TypeScript)
 
-### @malayalamland/runtime
+### @malayalamlang/runtime
 
 **What's included:**
 - Built-in functions
@@ -187,7 +187,7 @@ git push origin v0.2.0
 **Size:** ~20KB
 **Dependencies:** None
 
-### @malayalamland/cli
+### @malayalamlang/cli
 
 **What's included:**
 - CLI executable
@@ -197,8 +197,8 @@ git push origin v0.2.0
 
 **Size:** ~100KB
 **Dependencies:** 
-- @malayalamland/core
-- @malayalamland/runtime
+- @malayalamlang/core
+- @malayalamlang/runtime
 - commander
 - chalk
 - readline-sync
@@ -208,8 +208,8 @@ git push origin v0.2.0
 ### npm Registry
 
 ```bash
-npm install @malayalamland/cli
-npm install -g @malayalamland/cli
+npm install @malayalamlang/cli
+npm install -g @malayalamlang/cli
 ```
 
 ### GitHub Releases
@@ -222,17 +222,17 @@ mkdir -p dist
 cp -r packages/*/dist dist/
 
 # Create tarball
-tar -czf malayalamland-v0.2.0.tar.gz dist/
+tar -czf malayalamlang-v0.2.0.tar.gz dist/
 
 # Create zip
-zip -r malayalamland-v0.2.0.zip dist/
+zip -r malayalamlang-v0.2.0.zip dist/
 ```
 
 ## Documentation Publication
 
 ### Website (Coming Soon)
 
-- Host documentation at malayalamland.dev
+- Host documentation at malayalamlang.dev
 - Use Docusaurus or similar
 - Deploy from `docs/` folder
 
@@ -295,7 +295,7 @@ npm publish --access public --verbose
 
 ## Links
 
-- NPM: https://www.npmjs.com/org/malayalamland
+- NPM: https://www.npmjs.com/org/malayalamlang
 - Repository: https://github.com/adsalihac/malayalam-lang
 - Issues: https://github.com/adsalihac/malayalam-lang/issues
 - Discussions: https://github.com/adsalihac/malayalam-lang/discussions

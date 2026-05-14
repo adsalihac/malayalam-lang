@@ -166,7 +166,7 @@ pnpm clean
 pnpm build
 
 # Archive for distribution
-tar -czf malayalamland.tar.gz packages/*/dist/ docs/ examples/
+tar -czf malayalamlang.tar.gz packages/*/dist/ docs/ examples/
 ```
 
 ## Publishing to npm
@@ -213,8 +213,8 @@ ENTRYPOINT ["pnpm", "-C", "packages/cli", "exec", "malayalam"]
 Build and run:
 
 ```bash
-docker build -t malayalamland .
-docker run malayalamland run examples/hello.ml
+docker build -t malayalamlang .
+docker run malayalamlang run examples/hello.ml
 ```
 
 ## Troubleshooting

@@ -1,5 +1,5 @@
 {
-  "name": "@malayalamland/runtime",
+  "name": "@malayalamlang/runtime",
   "version": "0.1.0",
   "description": "Malayalam language runtime and built-in functions",
   "type": "module",
@@ -13,7 +13,8 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsc",
@@ -25,9 +26,25 @@
   },
   "keywords": [
     "malayalam",
+    "programming-language",
     "runtime",
     "builtin-functions"
   ],
+  "author": "MalayalamLang Contributors",
+  "license": "MIT",
+  "homepage": "https://github.com/adsalihac/malayalam-lang#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adsalihac/malayalam-lang.git",
+    "directory": "packages/runtime"
+  },
+  "bugs": {
+    "url": "https://github.com/adsalihac/malayalam-lang/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "devDependencies": {
     "@types/node": "^20.11.0",
     "@typescript-eslint/eslint-plugin": "^6.16.0",

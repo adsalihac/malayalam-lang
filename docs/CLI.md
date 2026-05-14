@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-npm install -g @malayalamland/cli
+npm install -g @malayalamlang/cli
 ```
 
 ## Commands
@@ -243,11 +243,11 @@ Check the Malayalam syntax in your file against the language guide.
 Make sure the package is installed globally:
 
 ```bash
-npm install -g @malayalamland/cli
+npm install -g @malayalamlang/cli
 ```
 
 Or use the local package:
 
 ```bash
-npx @malayalamland/cli run script.ml
+npx @malayalamlang/cli run script.ml
 ```

@@ -58,7 +58,7 @@ export class MalayalamRuntime {
   /**
    * Get length of array or string
    */
-  static length(value: unknown): number {
+  static getLength(value: unknown): number {
     if (
       typeof value === 'string' ||
       Array.isArray(value) ||

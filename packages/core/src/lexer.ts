@@ -37,8 +37,6 @@ export const MALAYALAM_KEYWORDS = {
   // Operators
   കൂടെ: 'and',
   kude: 'and',
-  അല്ലെങ്കിൽ: 'or',
-  allel: 'or',
   അല്ല: 'not',
   alla: 'not',
 };

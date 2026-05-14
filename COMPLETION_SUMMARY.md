@@ -132,20 +132,20 @@ A complete, production-ready Malayalam programming language npm package has been
 
 ## 📦 Package Structure
 
-### @malayalamland/core
+### @malayalamlang/core
 - Main compiler package
 - Lexer, Parser, Transpiler, AST
 - ~400 lines of TypeScript
 - Zero external dependencies
 - Fully tested
 
-### @malayalamland/runtime
+### @malayalamlang/runtime
 - Built-in functions
 - ~200 lines of TypeScript
 - 40+ utility functions
 - Zero external dependencies
 
-### @malayalamland/cli
+### @malayalamlang/cli
 - Command-line interface
 - REPL implementation
 - ~200 lines of TypeScript

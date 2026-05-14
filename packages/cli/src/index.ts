@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { Compiler } from '@malayalamland/core';
+import { Compiler } from '@malayalamlang/core';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { Lexer } from '../lexer.js';
+import { Lexer } from './lexer.js';
 
 describe('Lexer', () => {
   it('should tokenize basic print statement in Malayalam', () => {

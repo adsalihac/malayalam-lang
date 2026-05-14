@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { Compiler } from '../index.js';
+import { Compiler } from './index.js';
 
 describe('Compiler', () => {
   it('should compile a simple print statement', () => {

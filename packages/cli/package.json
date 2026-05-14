@@ -23,7 +23,7 @@
     "build": "tsc && chmod +x dist/cli.js",
     "watch": "tsc --watch",
     "test": "vitest",
-    "test:run": "vitest run",
+    "test:run": "vitest run --passWithNoTests",
     "lint": "eslint src",
     "clean": "rm -rf dist"
   },

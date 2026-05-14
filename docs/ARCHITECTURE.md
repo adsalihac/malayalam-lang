@@ -62,6 +62,7 @@ MalayalamLang is a modern programming language that allows developers to write c
 The lexer (lexical analyzer) converts source code into tokens.
 
 **Responsibilities:**
+
 - Read character by character from source
 - Recognize Malayalam Unicode characters and Manglish keywords
 - Identify operators, literals, identifiers
@@ -69,6 +70,7 @@ The lexer (lexical analyzer) converts source code into tokens.
 - Generate token stream
 
 **Key Features:**
+
 - Malayalam keyword recognition
 - Manglish (transliterated) support
 - String literal parsing with escape sequences
@@ -86,12 +88,14 @@ class Lexer {
 The parser converts tokens into an Abstract Syntax Tree (AST).
 
 **Responsibilities:**
+
 - Read tokens from lexer
 - Validate syntax according to grammar rules
 - Build hierarchical AST structure
 - Provide helpful error messages
 
 **Supported Constructs:**
+
 - Variable declarations
 - Function declarations
 - Control flow (if/else, while, for)
@@ -109,6 +113,7 @@ class Parser {
 Language-independent representation of the program structure.
 
 **Node Types:**
+
 - `Program` - Root node containing statements
 - `VariableDeclaration` - Variable assignment
 - `FunctionDeclaration` - Function definition
@@ -123,6 +128,7 @@ Language-independent representation of the program structure.
 Converts AST into JavaScript code.
 
 **Responsibilities:**
+
 - Traverse AST nodes
 - Generate equivalent JavaScript
 - Maintain proper indentation
@@ -139,6 +145,7 @@ class Transpiler {
 Provides built-in functions and utilities.
 
 **Functions:**
+
 - `print()` - Console output
 - Math functions (abs, sqrt, pow, etc.)
 - String functions (toUpperCase, substring, etc.)
@@ -149,6 +156,7 @@ Provides built-in functions and utilities.
 Command-line interface for development.
 
 **Commands:**
+
 - `run` - Execute Malayalam files
 - `compile` - Generate JavaScript
 - `repl` - Interactive environment
@@ -156,6 +164,7 @@ Command-line interface for development.
 ## Data Flow Example
 
 ### Input
+
 ```ml
 ഫങ്ക്ഷൻ ചതുരം(x) {
   മടങ്ങി x * x
@@ -164,6 +173,7 @@ Command-line interface for development.
 ```
 
 ### After Lexer
+
 ```
 FUNCTION IDENTIFIER(square) LPAREN IDENTIFIER(x) RPAREN LBRACE
 RETURN IDENTIFIER(x) MULTIPLY IDENTIFIER(x)
@@ -172,6 +182,7 @@ PRINT LPAREN IDENTIFIER(square) LPAREN NUMBER(5) RPAREN RPAREN
 ```
 
 ### After Parser (AST Structure)
+
 ```json
 {
   "type": "Program",
@@ -208,6 +219,7 @@ PRINT LPAREN IDENTIFIER(square) LPAREN NUMBER(5) RPAREN RPAREN
 ```
 
 ### After Transpiler (JavaScript)
+
 ```javascript
 function ചതുരം(x) {
   return x * x;
@@ -217,6 +229,7 @@ console.log(ചതുരം(5));
 ```
 
 ### Output
+
 ```
 25
 ```
@@ -224,21 +237,26 @@ console.log(ചതുരം(5));
 ## Language Features
 
 ### Variable Declaration
+
 Supports implicit variable declaration with automatic type inference.
 
 ### Functions
+
 First-class functions with proper scoping.
 
 ### Control Flow
+
 - Conditional: `എങ്കിൽ`/`else`
 - Loops: `എന്ത്` (while), `എതിരായ` (for)
 
 ### Operators
+
 - Arithmetic: `+`, `-`, `*`, `/`, `%`
 - Comparison: `==`, `!=`, `<`, `>`, `<=`, `>=`
 - Logical: `കൂടെ` (and), `അല്ലെങ്കിൽ` (or), `അല്ല` (not)
 
 ### Comments
+
 Single-line comments with `//`
 
 ## Keyword Mapping
@@ -258,6 +276,7 @@ Malayalam keywords are mapped to JavaScript equivalents:
 ## Error Handling
 
 Errors are reported with:
+
 - Error type (Syntax, Runtime, etc.)
 - Message description
 - Line and column numbers
@@ -273,6 +292,7 @@ Errors are reported with:
 ## Future Extensions
 
 Planned features:
+
 1. Type system (optional static typing)
 2. Module system (import/export)
 3. Class support
@@ -291,6 +311,7 @@ Planned features:
 5. Runtime executes with Node.js
 
 For development:
+
 ```bash
 pnpm install          # Install dependencies
 pnpm build           # Compile TypeScript
@@ -301,6 +322,7 @@ pnpm lint            # Check code quality
 ## Contributing
 
 To extend the language:
+
 1. Add keywords to Lexer
 2. Update Parser with new grammar rules
 3. Create AST node types

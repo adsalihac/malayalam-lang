@@ -238,6 +238,8 @@ See the [examples/](./examples/) directory for complete programs.
 - 📚 [Documentation](./docs)
 - 🐛 [Issue Tracker](https://github.com/adsalihac/malayalam-lang/issues)
 - 💬 [Discussions](https://github.com/adsalihac/malayalam-lang/discussions)
+- ▶️ [Live Playground](https://malayalam-lang-playground.vercel.app/?utm_source=chatgpt.com)
+- 🧩 [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=MalayalamLang.malayalam-language)
 
 ## License
 

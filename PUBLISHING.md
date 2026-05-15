@@ -2,11 +2,13 @@
 
 ## Overview
 
-MalayalamLang is published as three main npm packages:
+MalayalamLang is published as five main npm packages:
 
 1. **@malayalamlang/core** - Compiler and transpiler
 2. **@malayalamlang/runtime** - Built-in functions
 3. **@malayalamlang/cli** - Command-line interface
+4. **@malayalamlang/vscode-extension** - VS Code language support
+5. **@malayalamlang/playground** - Interactive playground
 
 ## Pre-Publication Checklist
 
@@ -34,6 +36,8 @@ vim package.json
 vim packages/core/package.json
 vim packages/runtime/package.json
 vim packages/cli/package.json
+vim packages/vscode-extension/package.json
+vim packages/playground/package.json
 ```
 
 ### Step 2: Build
@@ -63,6 +67,10 @@ cd ../runtime
 npm publish --access public
 cd ../cli
 npm publish --access public
+cd ../vscode-extension
+npm publish --access public
+cd ../playground
+npm publish --access public
 cd ../..
 ```
 
@@ -73,6 +81,8 @@ cd ../..
 npm info @malayalamlang/core
 npm info @malayalamlang/runtime
 npm info @malayalamlang/cli
+npm info @malayalamlang/vscode-extension
+npm info @malayalamlang/playground
 
 # Test installation
 npm install -g @malayalamlang/cli
@@ -210,6 +220,32 @@ git push origin v0.2.0
 - commander
 - chalk
 - readline-sync
+
+### @malayalamlang/vscode-extension
+
+**What's included:**
+- Language syntax highlighting
+- Code completion
+- Language server integration
+- Debugging support
+
+**Size:** ~80KB
+**Dependencies:**
+- @malayalamlang/core
+- @malayalamlang/runtime
+
+### @malayalamlang/playground
+
+**What's included:**
+- Interactive code editor
+- Real-time execution
+- Example programs
+- Educational features
+
+**Size:** ~120KB
+**Dependencies:**
+- @malayalamlang/core
+- @malayalamlang/runtime
 
 ## Distribution Formats
 

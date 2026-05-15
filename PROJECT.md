@@ -21,10 +21,12 @@ MalayalamLang is a **modern, beginner-friendly programming language** that allow
 
 ## Project Stats
 
-📦 **3 Main Packages**
+📦 **5 Main Packages**
 - @malayalamlang/core (Compiler)
 - @malayalamlang/runtime (Built-in functions)
 - @malayalamlang/cli (Command-line interface)
+- @malayalamlang/vscode-extension (IDE integration)
+- @malayalamlang/playground (Web-based IDE)
 
 📝 **29+ Source Files**
 - 10 TypeScript compiler files
@@ -78,10 +80,18 @@ malayalam-lang/
 │   │   ├── src/
 │   │   │   └── index.ts
 │   │   └── package.json
-│   └── cli/               # Command-line interface
+│   ├── cli/               # Command-line interface
+│   │   ├── src/
+│   │   │   ├── index.ts
+│   │   │   └── cli.ts
+│   │   └── package.json
+│   ├── vscode-extension/  # VSCode language support
+│   │   ├── src/
+│   │   │   └── index.ts
+│   │   └── package.json
+│   └── playground/        # Interactive web playground
 │       ├── src/
-│       │   ├── index.ts
-│       │   └── cli.ts
+│       │   └── index.ts
 │       └── package.json
 ├── examples/              # Example programs
 │   ├── hello.ml
@@ -106,6 +116,29 @@ malayalam-lang/
 ├── pnpm-workspace.yaml    # pnpm workspace config
 └── vitest.config.ts       # Test configuration
 ```
+
+## Roadmap
+
+### VSCode Extension
+
+Make Malayalam development seamless in Visual Studio Code:
+
+- ✅ **Syntax Highlighting** - Color-coded keywords and syntax
+- 🚀 **IntelliSense** - Code completion and suggestions
+- 🐛 **Diagnostics** - Real-time error checking
+- 📍 **Navigation** - Go to definition, find references
+- 🔧 **Language Server** - Full LSP support
+
+### Web Playground
+
+Make the language accessible for students and curious developers:
+
+- ✅ **Browser-Based Editor** - Write code directly in your browser
+- 🚀 **Real-Time Execution** - See results instantly
+- 📦 **Browser Compiler** - Compile without backend infrastructure
+- 📚 **Interactive Examples** - Built-in tutorials and examples
+- 🎨 **Output Visualization** - Beautiful output rendering
+- 📤 **Code Sharing** - Share and collaborate on code
 
 ## Quick Start
 

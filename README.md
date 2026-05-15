@@ -113,9 +113,23 @@ packages/
 ├── core/              # Compiler & transpiler
 ├── runtime/           # Built-in functions
 ├── cli/               # Command-line interface
-├── vscode-extension/  # VSCode syntax highlighting
-└── playground/        # Browser-based IDE
+├── vscode-extension/  # VSCode language support
+└── playground/        # Interactive web playground
 ```
+
+## IDE & Tools
+
+### VSCode Extension
+- 🎨 Syntax highlighting for Malayalam and Manglish
+- 💡 IntelliSense & code completion
+- 🐛 Real-time diagnostics
+- ⚡ Go to definition & find references
+
+### Web Playground
+- 🌐 Write and run code in your browser
+- 📝 Built-in examples & tutorials
+- 🚀 No installation required
+- 👥 Share and collaborate
 
 ## Examples
 

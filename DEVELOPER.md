@@ -80,6 +80,40 @@ cli/src/
 └── cli.ts          # Command-line entry point
 ```
 
+#### `packages/vscode-extension/`
+
+VSCode language support with syntax highlighting, IntelliSense, and diagnostics.
+
+```
+vscode-extension/src/
+└── index.ts        # Extension entry point
+```
+
+**Roadmap Features:**
+- Syntax highlighting for Malayalam and Manglish
+- IntelliSense & code completion
+- Real-time diagnostics and error checking
+- Language Server Protocol (LSP) support
+- Go to definition & find references
+- Debugging support
+
+#### `packages/playground/`
+
+Interactive web-based playground for learning and experimenting.
+
+```
+playground/src/
+└── index.ts        # Playground core
+```
+
+**Roadmap Features:**
+- Browser-based code editor
+- Real-time code execution in the browser
+- Browser-based compiler (no backend required)
+- Interactive examples and tutorials
+- Output visualization
+- Code sharing capabilities
+
 ## Understanding the Compiler
 
 ### Compilation Pipeline

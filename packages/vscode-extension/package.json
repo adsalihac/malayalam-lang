@@ -1,0 +1,69 @@
+{
+  "name": "@malayalamlang/vscode-extension",
+  "version": "0.1.0",
+  "description": "Malayalam language support for Visual Studio Code",
+  "type": "module",
+  "publisher": "malayalamlang",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "activationEvents": [
+    "onLanguage:malayalam"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "malayalam",
+        "aliases": [
+          "Malayalam",
+          "malayalam"
+        ],
+        "extensions": [
+          ".ml"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "malayalam",
+        "scopeName": "source.malayalam",
+        "path": "./syntaxes/malayalam.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "vitest",
+    "test:run": "vitest run --passWithNoTests",
+    "lint": "eslint src",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "malayalam",
+    "programming-language",
+    "vscode",
+    "extension",
+    "language-support"
+  ],
+  "author": "MalayalamLang Contributors",
+  "license": "MIT",
+  "homepage": "https://github.com/adsalihac/malayalam-lang#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adsalihac/malayalam-lang.git",
+    "directory": "packages/vscode-extension"
+  },
+  "bugs": {
+    "url": "https://github.com/adsalihac/malayalam-lang/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "vscode": "^1.60.0"
+  }
+}

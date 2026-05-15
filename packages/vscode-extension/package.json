@@ -1,12 +1,21 @@
 {
-  "name": "@malayalamlang/vscode-extension",
+  "name": "malayalam-language",
+  "displayName": "Malayalam Language",
   "version": "0.1.0",
-  "description": "Malayalam language support for Visual Studio Code",
+  "description": "Write code in Malayalam! Syntax highlighting, IntelliSense, and language support for the Malayalam programming language.",
   "type": "module",
   "publisher": "malayalamlang",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#003d7a",
+    "theme": "dark"
+  },
   "engines": {
     "vscode": "^1.60.0"
   },
+  "categories": [
+    "Programming Languages"
+  ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "activationEvents": [
@@ -40,7 +49,10 @@
     "test": "vitest",
     "test:run": "vitest run --passWithNoTests",
     "lint": "eslint src",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "package": "vsce package",
+    "publish": "node publish.mjs",
+    "publish:auto": "node publish.mjs --publish"
   },
   "keywords": [
     "malayalam",
@@ -60,6 +72,14 @@
   "bugs": {
     "url": "https://github.com/adsalihac/malayalam-lang/issues"
   },
+  "files": [
+    "dist",
+    "syntaxes",
+    "language-configuration.json",
+    "icon.png",
+    "README.md",
+    "LICENSE"
+  ],
   "publishConfig": {
     "access": "public"
   },

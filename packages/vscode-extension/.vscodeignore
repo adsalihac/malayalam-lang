@@ -8,3 +8,7 @@ vitest.config.ts
 .eslintrc.json
 .prettierrc.json
 .gitignore
+.DS_Store
+*.svg
+RELEASE_GUIDE.md
+

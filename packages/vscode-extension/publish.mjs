@@ -90,7 +90,8 @@ async function checkIcon() {
 async function packageExtension() {
   console.log("📦 Packaging extension...\n");
   try {
-    await execAsync("vsce package");
+    // In a pnpm workspace, this avoids traversing symlinked monorepo deps.
+    await execAsync("vsce package --no-dependencies");
     const pkg = await readPackageJson();
     console.log(`✅ Package created: malayalam-language-${pkg.version}.vsix\n`);
   } catch (error) {
@@ -118,11 +119,11 @@ async function publish() {
 
   try {
     if (pat) {
-      await execAsync(`vsce publish -p ${pat}`);
+      await execAsync(`vsce publish --no-dependencies -p ${pat}`);
     } else {
       console.log("💡 You'll be prompted for your Personal Access Token (PAT)");
       console.log("   Get one at: https://dev.azure.com/malayalamlang/_usersSettings/tokens\n");
-      await execAsync("vsce publish");
+      await execAsync("vsce publish --no-dependencies");
     }
 
     const pkg = await readPackageJson();

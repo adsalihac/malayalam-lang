@@ -122,14 +122,14 @@ async function publish() {
       await execAsync(`vsce publish --no-dependencies -p ${pat}`);
     } else {
       console.log("💡 You'll be prompted for your Personal Access Token (PAT)");
-      console.log("   Get one at: https://dev.azure.com/malayalamlang/_usersSettings/tokens\n");
+      console.log("   Get one at: https://dev.azure.com/adsalihac/_usersSettings/tokens\n");
       await execAsync("vsce publish --no-dependencies");
     }
 
     const pkg = await readPackageJson();
     console.log(`\n✅ Published v${pkg.version} successfully!\n`);
     console.log(
-      "📍 Available at: https://marketplace.visualstudio.com/items?itemName=malayalamlang.malayalam-language\n"
+      "📍 VS Code extension: https://marketplace.visualstudio.com/items?itemName=MalayalamLang.malayalam-language\n"
     );
   } catch (error) {
     console.error("❌ Publishing failed:\n", error.message);

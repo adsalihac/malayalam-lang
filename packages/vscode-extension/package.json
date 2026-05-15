@@ -9,6 +9,7 @@
     "color": "#003d7a",
     "theme": "dark"
   },
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.60.0"
   },
@@ -74,6 +75,7 @@
     "dist",
     "syntaxes",
     "language-configuration.json",
+    "icon.png",
     "README.md",
     "LICENSE"
   ],

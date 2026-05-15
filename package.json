@@ -2,6 +2,7 @@
   "name": "malayalamlang",
   "version": "0.1.0",
   "description": "A Malayalam programming language - write code using Malayalam keywords!",
+  "private": true,
   "type": "module",
   "workspaces": [
     "packages/*"

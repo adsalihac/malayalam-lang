@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST='{"components/Editor.tsx -> @/lib/monacoLanguage":{"id":6820,"files":["static/chunks/861.a70659443fe2d3d6.js"]},"components/Editor.tsx -> @monaco-editor/react":{"id":9422,"files":["static/chunks/422.96167f59e4bf9d17.js"]},"lib/compiler.ts -> @malayalamlang/core":{"id":2674,"files":["static/chunks/674.2fc55fb8250b7b8a.js"]}}';

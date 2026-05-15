@@ -110,12 +110,13 @@ pera = "malayalam"
 ## Project Structure
 
 ```
+apps/
+├── playground/        # Interactive web playground
 packages/
 ├── core/              # Compiler & transpiler
 ├── runtime/           # Built-in functions
 ├── cli/               # Command-line interface
-├── vscode-extension/  # VSCode language support
-└── playground/        # Interactive web playground
+└── vscode-extension/  # VSCode language support
 ```
 
 ## IDE & Tools

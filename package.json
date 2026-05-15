@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/adsalihac/malayalam-lang.git"
+    "url": "git+https://github.com/adsalihac/malayalam-lang.git"
   },
   "homepage": "https://github.com/adsalihac/malayalam-lang#readme",
   "bugs": {

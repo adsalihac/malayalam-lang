@@ -1,4 +1,5 @@
-# MalayalamLang
+
+![MalayalamLang Banner](./assets/images/readme-banner.png)
 
 A modern, beginner-friendly programming language where you write code using Malayalam keywords! 🇮🇳
 

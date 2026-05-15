@@ -71,6 +71,7 @@ malayalam watch script.ml
 ```
 
 Manglish:
+
 ```ml
 ennam = 42
 pera = "malayalam"
@@ -120,12 +121,25 @@ packages/
 ## IDE & Tools
 
 ### VSCode Extension
+
 - 🎨 Syntax highlighting for Malayalam and Manglish
 - 💡 IntelliSense & code completion
 - 🐛 Real-time diagnostics
 - ⚡ Go to definition & find references
 
+Install from VS Code Marketplace:
+
+- 🔗 <https://marketplace.visualstudio.com/items?itemName=MalayalamLang.malayalam-language>
+- 📦 Extension ID: `MalayalamLang.malayalam-language`
+
+Install via command line:
+
+```bash
+code --install-extension MalayalamLang.malayalam-language
+```
+
 ### Web Playground
+
 - 🌐 Write and run code in your browser
 - 📝 Built-in examples & tutorials
 - 🚀 No installation required

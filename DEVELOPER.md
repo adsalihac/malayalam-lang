@@ -1,6 +1,6 @@
 # Developer Guide for MalayalamLang
 
-## Welcome!
+## Welcome
 
 Thank you for your interest in contributing to MalayalamLang. This guide will help you understand the codebase and start making contributions.
 
@@ -38,6 +38,7 @@ pnpm test
 ### Packages
 
 #### `packages/core/`
+
 The heart of MalayalamLang - the compiler.
 
 ```
@@ -50,12 +51,14 @@ core/src/
 ```
 
 **Key Classes:**
+
 - `Lexer`: Tokenizes Malayalam source code
 - `Parser`: Parses tokens into AST
 - `Transpiler`: Converts AST to JavaScript
 - `Compiler`: Orchestrates the pipeline
 
 #### `packages/runtime/`
+
 Built-in Malayalam functions and utilities.
 
 ```
@@ -64,9 +67,11 @@ runtime/src/
 ```
 
 **Key Function:**
+
 - `MalayalamRuntime`: Static class with built-in functions
 
 #### `packages/cli/`
+
 Command-line interface and REPL.
 
 ```
@@ -98,6 +103,7 @@ Node.js Execution
 ### Example: Tracing "കാണിക്കുക("Hello")"
 
 #### 1. Lexer Output
+
 ```
 [
   { type: 'PRINT', value: 'കാണിക്കുക' },
@@ -109,6 +115,7 @@ Node.js Execution
 ```
 
 #### 2. Parser Output (AST)
+
 ```json
 {
   "type": "Program",
@@ -131,11 +138,13 @@ Node.js Execution
 ```
 
 #### 3. Transpiler Output
+
 ```javascript
 console.log("Hello");
 ```
 
 #### 4. Execution
+
 ```
 Hello
 ```
@@ -205,6 +214,7 @@ File: `docs/SYNTAX.md`
 ```ml
 കറയ്ക്കുക("This is an error")
 ```
+
 ```
 
 #### Step 5: Test

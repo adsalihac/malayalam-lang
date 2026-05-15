@@ -85,25 +85,33 @@ malayalam --version
 
 1. Go to repository Settings → Secrets and variables → Actions
 2. Add `NPM_TOKEN`:
-   - Get token from npm.js settings
-   - Click "Create New Token" → "Automation"
-   - Copy the token
-   - Paste in GitHub secret as `NPM_TOKEN`
+
+- Optional but recommended for fallback mode: add `NPM_TOKEN`
+- Create an **Automation** token, or a **Granular Access Token** with publish permission and **bypass 2FA for publishing** enabled
+- Copy the token
+- Paste in GitHub secret as `NPM_TOKEN`
+
+If `NPM_TOKEN` is not set, CI will use npm trusted publishing (OIDC). In that case, configure each npm package for trusted publishing from this GitHub repository in npm package settings.
 
 ### Publish Automatically
 
-Simply push to main branch:
+Publishing runs only for version tags that match `v*.*.*` (for example `v0.2.0`):
 
 ```bash
 git add .
 git commit -m "chore: bump version to 0.2.0"
 git push origin main
+git tag v0.2.0
+git push origin v0.2.0
 ```
 
 CI/CD pipeline will automatically:
+
 1. Run tests and linting
 2. Build packages
-3. Publish to npm registry
+3. Publish to npm registry using `NPM_TOKEN` if present, otherwise trusted publishing (OIDC)
+
+If publishing fails with `E403` and mentions 2FA or bypass requirements, update `NPM_TOKEN` to a token that supports automated publish, then rerun the failed workflow from GitHub Actions.
 
 ## Version Management
 

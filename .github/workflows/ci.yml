@@ -52,6 +52,8 @@ jobs:
     permissions:
       id-token: write
       contents: read
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     steps:
       - uses: actions/checkout@v4
@@ -75,18 +77,18 @@ jobs:
         run: pnpm build
 
       - name: Publish packages to npm (token)
-        if: ${{ secrets.NPM_TOKEN != '' }}
+        if: env.NPM_TOKEN != ''
         run: pnpm -r publish --access public --no-git-checks
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ env.NPM_TOKEN }}
 
       - name: Publish packages to npm (trusted publishing)
-        if: ${{ secrets.NPM_TOKEN == '' }}
+        if: env.NPM_TOKEN == ''
         run: pnpm -r publish --access public --no-git-checks --provenance
 
       - name: Publish mode summary
         run: |
-          if [ -n "${{ secrets.NPM_TOKEN }}" ]; then
+          if [ -n "${NPM_TOKEN}" ]; then
             echo "Published using NPM_TOKEN secret."
           else
             echo "Published using npm trusted publishing (OIDC)."
